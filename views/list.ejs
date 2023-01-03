@@ -15,7 +15,7 @@
   <body>
     <div class="banner"></div>
     <div class="todocontent">
-    <h1><%= kindOfDay %></h1>
+    <h1 class="date"><%= kindOfDay %></h1>
     <div class="taskEntry">
       <form class="taskForm" action="/" method="post">
         <input type="text" name="newItem" placeholder="Add a list item" />
@@ -25,12 +25,21 @@
     <div class="list">
       <% for (var i=0; i<newListItems.length; i++) { %>
         <div class="item">
-          <input type="checkbox">
-        <p><%= newListItems[i] %></p> 
+          <input type="checkbox" class="checkbox-round">
+        <span><%= newListItems[i] %></span> 
         </div>
     <% }; %>
-
+<div class="listFooter">
+ <span># Items Left</span>
+ <span>Clear Completed</span>
+</div>
     </div>
 </div>
+<div class="categories">
+  <span>All</span>
+  <span>Active</span>
+  <span>Complete</span>
+</div>
+<p class="bottomText">Drag and Drop to Reorder List</p>
   </body>
 </html>

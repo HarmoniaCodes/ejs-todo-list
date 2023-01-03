@@ -9,8 +9,8 @@
     --lgblue: hsl(233, 11%, 84%);
     --darkgrayblue: hsl(236, 9%, 61%);
     --verydarkgrayblue: hsl(235, 19%, 35%);
-    /* Dark Theme Colors */
 
+    /* Dark Theme Colors */
     --verydarkblue: hsl(235, 21%, 11%);
     --darkdesatblue: hsl(235, 24%, 19%);
     --lightgrayblue: hsl(234, 39%, 85%);
@@ -19,7 +19,7 @@
     --verydarkgrayblue2: hsl(233, 14%, 35%);
     --verydarkgrayblue3: hsl(237, 14%, 26%);
     /* Checkmarks */
-    /*Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%) */
+    /*Check Background:  */
 
 }
 
@@ -29,18 +29,52 @@ body {
     height: 100vh;
     color: var(--verylightgray);
     font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.125rem;
+}
+
+
+input {
+    border: none;
+    height: 1.4rem;
+}
+
+.checkbox-round {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: 1px solid gray;
+    border-radius: 50%;
+    margin: 0.5rem;
+    appearance: none;
+    outline: none;
+
+}
+
+input:checked {
+    background-image: linear-gradient(to bottom right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+}
+
+input:checked+span {
+
+    text-decoration: line-through;
+    text-decoration-color: var(--lgblue);
+    color: var(--lgblue);
+
 }
 
 .banner {
     background-image: url('/images/bg-mobile-light.jpg');
     background-size: cover;
     width: 100%;
-    height: 10rem;
+    height: 13rem;
     z-index: -99;
     position: absolute;
     top: 0;
     margin: 0;
     left: 0;
+}
+
+.date {
+    font-weight: 400;
 }
 
 .todocontent {
@@ -54,7 +88,7 @@ body {
 .taskEntry {
     margin-bottom: 1rem;
     width: 100%;
-    padding: 0.2rem;
+    padding: 0.6rem;
     border-radius: 0.5rem;
     background-color: var(--verylightgray);
     color: var(--verydarkgrayblue);
@@ -62,8 +96,44 @@ body {
 
 .list {
     width: 100%;
-    padding: 0.2rem;
     border-radius: 0.5rem;
     background-color: var(--verylightgray);
     color: var(--verydarkgrayblue);
+}
+
+.item {
+    padding: 0.6rem;
+    border-bottom: 1px solid var(--darkgrayblue);
+}
+
+.item:last-child {
+    border-bottom: none;
+}
+
+.listFooter {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--darkgrayblue);
+}
+
+.categories {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 4rem;
+    border-radius: 0.5rem;
+    background-color: var(--verylightgray);
+    color: var(--verydarkgrayblue);
+    color: var(--darkgrayblue);
+}
+
+.bottomText {
+    margin-top: 3rem;
+    text-align: center;
+    color: var(--darkgrayblue);
 }
