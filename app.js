@@ -7,7 +7,7 @@ var items = ["Add an item below to get started"];
 
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static("public"));
 // define what should happen when someone makes a request to the home route /
 // request, response
 app.get("/", function (req, res) {
@@ -42,31 +42,3 @@ app.post("/", function (req, res) {
 app.listen(3000, function () {
   console.log("Server is running on port 3000");
 });
-
-// Switch practice
-// in the "case" that currentDay = given number, show specific parameter for day
-// switch (currentDay) {
-//   case 0:
-//     day = "Sunday";
-//     break;
-//   case 1:
-//     day = "Monday";
-//     break;
-//   case 2:
-//     day = "Tuesday";
-//     break;
-//   case 3:
-//     day = "Wednesday";
-//     break;
-//   case 4:
-//     day = "Thursday";
-//     break;
-//   case 5:
-//     day = "Friday";
-//     break;
-//   case 6:
-//     day = "Saturday";
-//     break;
-//   default:
-//     console.log("error");
-// }

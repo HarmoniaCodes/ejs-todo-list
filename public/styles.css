@@ -1,0 +1,69 @@
+:root {
+    /* Bottom Links */
+    --bright-blue: hsl(220, 98%, 61%);
+
+    /* Light Theme Colors */
+    /* These need more descriptive names */
+    --verylightgray: hsl(0, 0%, 98%);
+    --vlgblue: hsl(236, 33%, 92%);
+    --lgblue: hsl(233, 11%, 84%);
+    --darkgrayblue: hsl(236, 9%, 61%);
+    --verydarkgrayblue: hsl(235, 19%, 35%);
+    /* Dark Theme Colors */
+
+    --verydarkblue: hsl(235, 21%, 11%);
+    --darkdesatblue: hsl(235, 24%, 19%);
+    --lightgrayblue: hsl(234, 39%, 85%);
+    --lightgrayblueHOVER: hsl(236, 33%, 92%);
+    --darkgrayblue2: hsl(234, 11%, 52%);
+    --verydarkgrayblue2: hsl(233, 14%, 35%);
+    --verydarkgrayblue3: hsl(237, 14%, 26%);
+    /* Checkmarks */
+    /*Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%) */
+
+}
+
+body {
+    padding: 1rem;
+    background-color: var(--vlgblue);
+    height: 100vh;
+    color: var(--verylightgray);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.banner {
+    background-image: url('/images/bg-mobile-light.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 10rem;
+    z-index: -99;
+    position: absolute;
+    top: 0;
+    margin: 0;
+    left: 0;
+}
+
+.todocontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+.taskEntry {
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: var(--verylightgray);
+    color: var(--verydarkgrayblue);
+}
+
+.list {
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 0.5rem;
+    background-color: var(--verylightgray);
+    color: var(--verydarkgrayblue);
+}
