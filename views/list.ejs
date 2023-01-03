@@ -17,17 +17,19 @@
     <div class="todocontent">
     <h1><%= kindOfDay %></h1>
     <div class="taskEntry">
-      <form class="" action="/" method="post">
+      <form class="taskForm" action="/" method="post">
         <input type="text" name="newItem" placeholder="Add a list item" />
-        <button name="button" class="">Add Item</button>
+        <button name="button" class="">+</button>
       </form>
     </div>
-    <div class="listItems">
-    <ul>
+    <div class="list">
       <% for (var i=0; i<newListItems.length; i++) { %>
-        <li><%= newListItems[i] %></li> 
+        <div class="item">
+          <input type="checkbox">
+        <p><%= newListItems[i] %></p> 
+        </div>
     <% }; %>
-    </ul>
+
     </div>
 </div>
   </body>

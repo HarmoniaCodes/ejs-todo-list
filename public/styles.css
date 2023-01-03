@@ -60,7 +60,7 @@ body {
     color: var(--verydarkgrayblue);
 }
 
-.listItems {
+.list {
     width: 100%;
     padding: 0.2rem;
     border-radius: 0.5rem;
