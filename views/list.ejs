@@ -15,18 +15,19 @@
   <body>
     <div class="banner"></div>
     <div class="todocontent">
-    <h1 class="date"><%= kindOfDay %></h1>
-    <div class="taskEntry">
-      <form class="taskForm" action="/" method="post">
-        <input type="text" name="newItem" placeholder="Add a list item" />
-        <button name="button" class="">+</button>
-      </form>
+    <div class="header">
+    <span class="date"><%= kindOfDay %></h1>
+    <img class="lightDarkToggle" src="../images/icon-moon.svg" />
     </div>
+      <form class="taskForm" action="/" method="post">
+        <input class="inputForm" type="text" name="newItem" placeholder="Add a list item" />
+        <button name="button" class="button">+</button>
+      </form>
     <div class="list">
       <% for (var i=0; i<newListItems.length; i++) { %>
         <div class="item">
           <input type="checkbox" class="checkbox-round">
-        <span><%= newListItems[i] %></span> 
+        <span class="listItem"><%= newListItems[i] %></span> 
         </div>
     <% }; %>
 <div class="listFooter">
